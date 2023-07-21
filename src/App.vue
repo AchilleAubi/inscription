@@ -206,10 +206,26 @@ export default {
       return registrationCost + accommodationCost;
     },
     confirmRegistration() {
-      console.log("Inscription confirmée !");
-      // Vous pouvez ajouter ici le traitement pour la confirmation de l'inscription,
-      // par exemple, en envoyant un email de confirmation à l'utilisateur, etc.
-    },
+    console.log("Inscription confirmée !");
+    // Vous pouvez ajouter ici le traitement pour la confirmation de l'inscription,
+    // par exemple, en envoyant un email de confirmation à l'utilisateur, etc.
+
+    // Après la confirmation, nous allons masquer le récapitulatif et réinitialiser le formulaire
+    this.showSummary = false;
+    this.firstName = "";
+    this.lastName = "";
+    this.email = "";
+    this.gender = "";
+    this.institution = "";
+    this.address = "";
+    this.country = "";
+    this.postalCode = "";
+    this.city = "";
+    this.personalWebsite = "";
+    this.institutionWebsite = "";
+    this.registrationType = "";
+    this.accommodation = "";
+  },
     editRegistration() {
       console.log("Modifier l'inscription");
       // Vous pouvez ajouter ici le traitement pour permettre à l'utilisateur de modifier son inscription,
